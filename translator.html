@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bootstrap Example</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript" src="translateController.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	</head>
+	<body>
+		<div class="row">
+				<div class="col-sm-4 dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bahasa Indonesia<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="#">Bahasa Indonesia</a></li>
+						<li><a href="#">Bahasa Jawa</a></li>
+					</ul>
+					<button class="btn btn-default" type="submit">Submit</button>
+				</div>
+				<button class="col-sm-0 glyphicon glyphicon-retweet"></button>
+				<div class="col-sm-4 dropdown">
+				
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bahasa Jawa<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="#">Bahasa Jawa</a></li>
+						<li><a href="#">Bahasa Indonesia</a></li>
+					</ul>
+				</div>
+		</div>
+		<div class="row">
+			<textarea class="col-sm-4" type="text" id="source" name="source" onkeyup="translate(this.value)"></textarea>
+			<div class="col-sm-1"></div>
+			<textarea class="col-sm-4" type="text" id="target" name="target"></textarea>
+		</div>
+	</body>
+</html>
+				

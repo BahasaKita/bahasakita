@@ -1,11 +1,12 @@
 <?php
-define('DB_HOST','localhost');
-define('DB_NAME','bahasakitaDB');
-define('DB_USER','nizar');
-define('DB_PASSWORD','vendetta44');
-$conn=mysql_connect(DB_HOST,DB_USER,DB_PASSWORD);
-if(!$conn) {
-	die("Failed to connect to MySQL: ".mysql_error());
+$dbhost="localhost";
+$dbname="bahasakitaDB";
+$dbuser="root";
+$dbpassword="vendetta44";
+function connect($dbhost,$dbname,$dbuser,$dbpassword) {
+	$conn=new PDO("mysql:host=$dbhost;dbname=$dbname",$dbuser,$dbpassword);
+	$conn->setAttribute(PDO::ATTR_EMULATE_PREPARES,false);
+	$conn->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+	return $conn;
 }
-$db=mysql_select_db(DB_NAME,$conn);
 ?>
