@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Bootstrap Example</title>
+		<title>Penerjemah</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -17,9 +17,9 @@
 						<li class="active"><a href="#">Bahasa Indonesia</a></li>
 						<li><a href="#">Bahasa Jawa</a></li>
 					</ul>
-					<button class="btn btn-default" type="submit">Submit</button>
+					<button class="btn btn-default" type="submit" onclick="reverseTranslate()">Terjemahkan</button>
 				</div>
-				<button class="col-sm-0 glyphicon glyphicon-retweet"></button>
+				<button class="col-sm-0 glyphicon glyphicon-retweet" onclick=""></button>
 				<div class="col-sm-4 dropdown">
 				
 					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bahasa Jawa<span class="caret"></span></button>
@@ -30,9 +30,9 @@
 				</div>
 		</div>
 		<div class="row">
-			<textarea class="col-sm-4" type="text" id="source" name="source" onkeyup="translate(this.value)"></textarea>
+			<textarea class="col-sm-4" type="text" id="source" name="id" onkeyup="translate(this.value)"></textarea>
 			<div class="col-sm-1"></div>
-			<textarea class="col-sm-4" type="text" id="target" name="target"></textarea>
+			<textarea readonly class="col-sm-4" type="text" id="target" name="jw"></textarea>
 		</div>
 	</body>
 </html>
