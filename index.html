@@ -2,12 +2,12 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>BahasaKita</title>
-		 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="translateController.js"></script>
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+		<script type="text/javascript" src="translateController.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 		<style>
 			body {
 				box-sizing:border-box;
@@ -16,6 +16,10 @@
 			.container {
 				width:100%;
 				padding:0 0 0 0;
+			}
+			.container.about-us  {
+				width:100%;
+				padding:37px 0 37px 0;
 			}
 			.carousel {
 				background:white;
@@ -49,7 +53,8 @@
 				background:none;
 			}
 			.translator {
-				padding:0px 0px 47px 0px;
+				padding:32px 0px 47px 0px;
+				background:red;
 			}
 
 		
@@ -66,7 +71,7 @@
 				<ul class="nav navbar-nav">
 					<li class="active"><a href="#">Beranda</a></li>
 					<li><a href="#">Tentang Kami</a></li>
-					<li><a href="#">Kursus</a></li>
+					<li><a href="#">Kamus</a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li class="dropdown" id="menuLogin"><a clas="dropdown-toggle" href="#" data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"> Login</span></a>
@@ -184,6 +189,8 @@
 			</div>
 			</div>
 			<div class="translator text-center">
+			<h3 style="color:white">Kamus</h3>
+		
 			<div class="row">
 				<div class="col-sm-4 dropdown">
 					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bahasa Indonesia<span class="caret"></span></button>
