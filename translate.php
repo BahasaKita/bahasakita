@@ -2,8 +2,8 @@
 include("connect.php");
 $conn=connect($dbhost,$dbname,$dbuser,$dbpassword);
 //$sourcevalue=$_GET["id"];
-$_GET["id"];
-$_GET["jw"];
+//$_GET["id"];
+//$_GET["jw"];
 $target="jawa";
 $source="indonesia";
 foreach($_GET as $key => $value) {
@@ -43,6 +43,7 @@ while($row=$query->fetch(PDO::FETCH_ASSOC)) {
 	}
 	if($row['indonesia']) {
 		echo $row['indonesia'];
+		break;
 	}
 }
 	

@@ -1,22 +1,25 @@
 // var value=document.getElementById("source").value;
+textAreaElement=document.getElementsByTagName("textarea");
 function reverseTranslate() {
 //	alert(document.getElementsByTagName("textarea")[0].getAttribute("name")=="id");
 //	alert(document.getElementsByTagName("textarea")[0].getAttribute("name")=="jw");
-	if(document.getElementsByTagName("textarea")[0].getAttribute("name")=="id") {
-		document.getElementsByTagName("textarea")[0].setAttribute("name","jw");
-		document.getElementsByTagName("textarea")[1].setAttribute("name","id");
-		window.key="jw";
+document.getElementById("target").innerHTML="";
+	
+	if(textAreaElement[0].getAttribute("name")=="id") {
+		textAreaElement[0].setAttribute("name","jw");
+		textAreaElement[1].setAttribute("name","id");
+		//window.key="jw";
 		//alert(window.key);
 	}
-	else if(document.getElementsByTagName("textarea")[0].getAttribute("name")=="jw") {
-		document.getElementsByTagName("textarea")[0].setAttribute("name","id");
-		document.getElementsByTagName("textarea")[1].setAttribute("name","jw");
-		window.key="id";
+	else if(textAreaElement[0].getAttribute("name")=="jw") {
+		textAreaElement[0].setAttribute("name","id");
+		textAreaElement[1].setAttribute("name","jw");
+	//	window.key="id";
 	}
 }
 function translate(str) {
 	var url="translate.php";
-	var key=(document.getElementsByTagName("textarea")[0].getAttribute("name")=="id")?"id":"jw";
+	var key=textAreaElement[0].getAttribute("name");
 	var value=document.getElementById("source").value;
 	var vars=url+"?"+key+"="+value;
 	
