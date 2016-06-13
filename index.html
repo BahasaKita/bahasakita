@@ -7,6 +7,7 @@
 		 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="translateController.js"></script>
 		<style>
 			body {
 				box-sizing:border-box;
@@ -46,6 +47,9 @@
 			}
 			.right.carousel-control,.left.carousel-control {
 				background:none;
+			}
+			.translator {
+				padding:0px 0px 47px 0px;
 			}
 
 		
@@ -179,8 +183,31 @@
 			</div>
 			</div>
 			</div>
-
-
+			<div class="translator text-center">
+			<div class="row">
+				<div class="col-sm-4 dropdown">
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bahasa Indonesia<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="#">Bahasa Indonesia</a></li>
+						<li><a href="#">Bahasa Jawa</a></li>
+					</ul>
+					<button class="btn btn-default" type="submit" onclick="translate(document.getElementsByTagName('textarea')[0].value)">Terjemahkan</button>
+				</div>
+				<button class="col-sm-0 glyphicon glyphicon-retweet" onclick="reverseTranslate()"></button>
+				<div class="col-sm-4 dropdown">
+				
+					<button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">Bahasa Jawa<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li class="active"><a href="#">Bahasa Jawa</a></li>
+						<li><a href="#">Bahasa Indonesia</a></li>
+					</ul>
+				</div>
+		</div>
+		<div class="row">
+			<textarea class="col-sm-4" type="text" id="source" name="id" onkeyup="translate(this.value)"></textarea>
+			<div class="col-sm-1"></div>
+			<textarea readonly class="col-sm-4" type="text" id="target" name="jw"></textarea>
+		</div>
 		</div>
 
 	
